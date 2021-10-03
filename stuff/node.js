@@ -8,15 +8,15 @@ recipePage.use(bp.urlencoded({extended: true}));
 //recipePage.use(express.static(path.join(__dirname, "stuff")));
 
 let recipes = [
-    {"name": "ooo", "instructions": ["Something", "Anything"], "ingredients": ["Kristo", "Kristo", "Kristo"]},
-    {"name": "aaa", "instructions": ["Everything", "Nothing"], "ingredients": ["Lasse", "Lasse", "Lasse"]}
+    {"name": "ooo", "instructions": ["Something", "Anything"], "ingredients": ["Thing1", "Thing2", "Thing3"]},
+    {"name": "aaa", "instructions": ["Everything", "Nothing"], "ingredients": ["Item", "Key item", "Common item"]}
 ];
 
 let requestedDish;
 
 recipePage.get("/recipe/:food", (req, res) => {
     requestedDish = res.req.params.food;
-    res.sendFile(path.join(__dirname, "Week4.html"));
+    res.sendFile(path.join(__dirname, "Index.html"));
 })
 
 recipePage.get("/dish", (req, res) => {
